@@ -31,3 +31,9 @@ Para verificar a documentação, abra no navegador a rota http://localhost:8080/
 Swagger está instalado e com os dados atualizados, mas caso queira gerar novos dados:
 Executar o comando npm run swagger-autogen
 ```
+
+## HEROKU
+```
+A aplicação está rodando na heroku e pode ser acessada em: https://rick-bt-api.herokuapp.com/
+Porém ela não funcionará para conectar ao banco de dados visto que é um recurso pago e subi ela apenas para demonstração
+```
