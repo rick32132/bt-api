@@ -19,7 +19,7 @@ http://localhost:8080/
 ```
 ## Run Tests
 ``` 
-Para rodar os teste é necessário ter a api rodando 
+Para rodar os testes é necessário ter a api rodando 
 Executar "npm run test"
 ```
 ## Documentation
