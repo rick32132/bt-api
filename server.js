@@ -3,9 +3,10 @@ const cors = require("cors");
 
 const db = require("./src/app/models");
 const app = express();
-const corsOptions = {
-    origin: "http://localhost:8081"
-}
+const corsOptions = {origin: "http://localhost:8081"}
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('./swagger_output.json')
+
 
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -26,16 +27,16 @@ db.mongoose
 
 
 
-app.get("/", (req, res) => {
-    res.json({message: "HELLO WORLD DO RICKZINHO"});
-})
-
-require("./src/app/routes/student.routes")(app);
-require("./src/app/routes/course.routes")(app);
-
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 })
+
+require("./src/app/routes/course.routes")(app);
+require("./src/app/routes/student.routes")(app);
+
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+
+
 
 

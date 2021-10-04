@@ -4,7 +4,7 @@ const Course = db.courses;
 
 exports.create = (req, res) => {
     if(!req.body.name) {
-        res.status(400).send({ message: "Content can not be empty!" });
+        res.status(422).send({ message: "Name can not be empty!" });
         return;
     }
 
