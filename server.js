@@ -27,6 +27,9 @@ db.mongoose
 
 
 
+app.get("/", (req, res) => {
+    res.json({ message: "Welcome to BT-API! Try request to /api/students or /api/courses" });
+});
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
