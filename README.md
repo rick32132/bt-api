@@ -1,4 +1,4 @@
-# bt-api
+# BT-API
  Api Node e Express com MongoDB e Mongoose
 
 # Instruções para rodar o projeto
